@@ -43,6 +43,30 @@ public class PathRootLeaf {
         path.remove(path.size()-1);
 
     }
+
+    public static void pathRootLeaf2(Node root, ArrayList<Integer>path){
+        if(root == null){
+            return;
+        }
+
+        path.add(root.data);
+
+        if(root.left == null && root.right == null){
+            printPath(path);
+            
+        }
+
+        pathRootLeaf2(root.left, path);
+        pathRootLeaf2(root.right, path);
+        path.remove(path.size()-1);
+    }
+
+    public static void printPath(ArrayList<Integer>path){
+        for(int i=0; i<path.size(); i++){
+            System.out.print(path.get(i)+"->");
+        }
+        System.out.println("Null");
+    }
     public static void main(String args[]){
           /*
          *              1
@@ -63,5 +87,7 @@ public class PathRootLeaf {
         root1.right.right.left = new Node(9);
 
         pathRootLeaf(root1);
+
+        pathRootLeaf2(root1, new ArrayList<>());
     }
 }

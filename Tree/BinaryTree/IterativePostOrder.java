@@ -28,17 +28,16 @@ public class IterativePostOrder {
             root = st.peek();
             
             if(root.right != null && root.right != prev){
-                   
-                    root = root.right;
-                }
-                else{
-                    System.out.print(root.data+" ");
-                    st.pop();
-                    prev = root;
-                    root = null;
-                }
+                root = root.right;
+            }
+            else{
+                System.out.print(root.data+" ");
+                st.pop();
+                prev = root;
+                root = null;
             }
         }
+    }
     public static void main(String[] args) {
         Node root = new Node(8);
         root.left = new Node(3);

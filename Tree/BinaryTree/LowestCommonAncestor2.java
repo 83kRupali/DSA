@@ -31,7 +31,7 @@ public class LowestCommonAncestor2 {
         if(leftlca == null){
             return rightlca;
         }
-
+        
         return root;
     }
 
