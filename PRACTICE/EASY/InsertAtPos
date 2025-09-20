@@ -1,0 +1,34 @@
+Node insertAtPos(Node head, int p, int x) {
+        // code here
+        Node newNode = new Node(x);   
+        
+        if(head == null && p != 0) return head;
+        if(p == 0){
+            newNode.next = head.next;
+            head.next.prev = newNode;
+            head.next = newNode;
+            newNode.prev = head;
+            
+            return head;
+        }
+        
+        Node curr = head;
+
+        for(int i=0; i<p; i++){
+            curr = curr.next;
+        }
+        
+        if(curr.next == null){
+            curr.next = newNode;
+            newNode.prev = curr;
+            return head;
+        }
+        
+        newNode.next = curr.next;
+        curr.next.prev = newNode;
+        curr.next = newNode;
+        newNode.prev= curr;
+        
+        return head;
+        
+    }
