@@ -56,8 +56,6 @@ Node reverse(Node head){
                 maxNode = curr;
             }
         }
-        
         head = reverse(head);
-        
         return head;
     }
