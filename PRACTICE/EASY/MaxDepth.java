@@ -10,7 +10,7 @@ public int ans = 0;
             return;
         }
 
-        ans = Math.max(ans, count+1);
+        //ans = Math.max(ans, count+1);
         //if(root.left != null) 
         getAns(root.left, count+1);
         //if(root.right != null) 
