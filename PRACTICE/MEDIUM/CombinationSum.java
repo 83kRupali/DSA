@@ -1,4 +1,4 @@
-public ArrayList<ArrayList<Integer>> combinationSum(int n, int k) {
+public ArrayList<ArrayList<Integer>> combinationSum(int n, int k){
         
         ArrayList<ArrayList<Integer>>result = new ArrayList<>();
         backtrack(1, new ArrayList<>(), 0, k, n, result);
