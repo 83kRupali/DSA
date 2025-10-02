@@ -1,4 +1,4 @@
-public boolean rotateString(String s, String goal) {
+public boolean rotateString(String s, String goal){
         int n1 = s.length();
         int n2 = goal.length();
 
