@@ -1,0 +1,20 @@
+  public int lengthOfLastWord(String s) {
+        APPROACH-1
+        // String arr[] = s.split(" ");
+        // String ans = arr[arr.length-1];
+        // return ans.length();
+
+        APPROACH-2
+        int count = 0;
+        for(int i=s.length()-1; i>=0; i--){
+            if(s.charAt(i) != ' '){
+                count++;
+            }
+            else{
+                if(count>0){
+                    return count;
+                }
+            } 
+        }
+        return count;
+    }
