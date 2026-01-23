@@ -1,3 +1,6 @@
+// TC : O(n)
+// SC : O(n)
+
 class Solution {
     public int maxPeople(int[] arr) {
         // code here
